@@ -54,6 +54,7 @@ public class RetrofitUtil {
         }
         return sInstance;
     }
+
     public static RetrofitUtil getInstance(){
         if (sInstance == null){
             synchronized(RetrofitUtil.class){

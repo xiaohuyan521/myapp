@@ -62,6 +62,7 @@ class NetFragment : Fragment() {
         loadingDialog!!.showDialog()
         mlist = mutableListOf()
         for(url in netViewModel.datas){
+            if("".equals(url))continue
             val mTestService: RetrofitService<NewsBean> = RetrofitUtil.getInstance().t.create(RetrofitService::class.java) as RetrofitService<NewsBean>
             mTestService.getWithoutRxJava(url)
                 .subscribeOn(Schedulers.io())
