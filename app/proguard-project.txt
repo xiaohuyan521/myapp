@@ -1,0 +1,109 @@
+# To enable ProGuard in your project, edit project.properties
+# to define the proguard.config property as described in that file.
+#
+# Add project specific ProGuard rules here.
+# By default, the flags in this file are appended to flags specified
+# in ${sdk.dir}/tools/proguard/proguard-android.txt
+# You can edit the include path and order by changing the ProGuard
+# include property in project.properties.
+#
+# For more details, see
+#   http://developer.android.com/guide/developing/tools/proguard.html
+
+# Add any project specific keep options here:
+
+# If your project uses WebView with JS, uncomment the following
+# and specify the fully qualified class name to the JavaScript interface
+# class:
+#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
+#   public *;
+#}
+-dontusemixedcaseclassnames
+-dontskipnonpubliclibraryclasses
+-verbose
+-dontoptimize
+-dontpreverify
+-dontwarn au.com.bytecode.opencsv.**
+-keepattributes *Annotation*
+-keepattributes SourceFile,LineNumberTable
+-keep public class com.google.vending.licensing.ILicensingService
+-keep public class com.android.vending.licensing.ILicensingService
+-keepclassmembers public class * extends android.view.View {
+   void set*(***);
+   *** get*();
+}
+-keepclassmembers class * extends android.app.Activity {
+   public void *(android.view.View);
+}
+-keep class * implements android.os.Parcelable {
+  public static final android.os.Parcelable$Creator *;
+}
+
+
+-keepclassmembers class **.R$* {
+    public static <fields>;
+}
+-dontwarn android.support.**
+-assumenosideeffects class android.util.Log {
+    public static *** d(...);
+    public static *** v(...);
+}
+#不混淆此类  预约弹出 使用反射要找这个类
+-keep class com.yicloud.drassist.activities.EnglishWeekBar {*;}
+-keep class com.sun.mail.dsn.** { *; }
+-keep class com.sun.mail.handlers.** { *; }
+-keep class com.sun.mail.iap.** { *; }
+-keep class com.sun.mail.imap.** { *; }
+-keep class com.sun.mail.imap.protocol.** { *; }
+-keep class com.sun.mail.pop3.** { *; }
+-keep class com.sun.mail.smtp.** { *; }
+-keep class com.sun.mail.util.** { *; }
+-keep class javax.mail.** { *; }
+-keep class javax.mail.event.** { *; }
+-keep class javax.mail.internet.** { *; }
+-keep class javax.mail.search.** { *; }
+-keep class javax.mail.util.** { *; }
+-keep class com.sun.activation.registries.** { *; }
+-keep class javax.activation.** { *; }
+-keep class myjava.awt.datatransfer.** { *; }
+-keep class org.apache.harmony.awt.** { *; }
+-keep class org.apache.harmony.awt.datatransfer.** { *; }
+-keep class org.apache.harmony.awt.internal.nls.** { *; }
+-keep class org.apache.harmony.misc.** { *; }
+
+-keep class com.google.zxing.client.android.camera** { *; }
+-keep class com.google.zxing.** { *; }
+-keep class com.google.zxing.aztec** { *; }
+-keep class com.google.zxing.aztec.decoder** { *; }
+-keep class com.google.zxing.aztec.detector** { *; }
+-keep class com.google.zxing.aztec.encoder** { *; }
+-keep class com.google.zxing.client.result** { *; }
+-keep class com.google.zxing.common** { *; }
+-keep class com.google.zxing.common.detector** { *; }
+-keep class com.google.zxing.common.reedsolomon** { *; }
+-keep class com.google.zxing.datamatrix** { *; }
+-keep class com.google.zxing.datamatrix.decoder** { *; }
+-keep class com.google.zxing.datamatrix.detector** { *; }
+-keep class com.google.zxing.datamatrix.encoder** { *; }
+-keep class com.google.zxing.maxicode** { *; }
+-keep class com.google.zxing.maxicode.decoder** { *; }
+-keep class com.google.zxing.multi** { *; }
+-keep class com.google.zxing.multi.qrcode** { *; }
+-keep class com.google.zxing.multi.qrcode.detector** { *; }
+-keep class com.google.zxing.oned** { *; }
+-keep class com.google.zxing.oned.rss** { *; }
+-keep class com.google.zxing.oned.rss.expanded** { *; }
+-keep class com.google.zxing.oned.rss.expanded.decoders** { *; }
+-keep class com.google.zxing.pdf417** { *; }
+-keep class com.google.zxing.pdf417.decoder** { *; }
+-keep class com.google.zxing.pdf417.decoder.ec** { *; }
+-keep class com.google.zxing.pdf417.detector** { *; }
+-keep class com.google.zxing.pdf417.encoder** { *; }
+-keep class com.google.zxing.qrcode** { *; }
+-keep class com.google.zxing.qrcode.decoder** { *; }
+-keep class com.google.zxing.qrcode.detector** { *; }
+-keep class com.google.zxing.qrcode.encoder** { *; }
+-ignorewarnings
+-optimizationpasses 5
+-dontusemixedcaseclassnames
+-verbose

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="VoiceWaveView">
+        <attr name="lineSpace" format="dimension"/>
+        <attr name="lineWidth" format="dimension"/>
+        <attr name="duration" format="integer"/>
+
+        <attr name="waveMode" format="enum">
+            <enum name="up_down" value="0"/>
+            <enum name="left_right" value="1"/>
+        </attr>
+
+        <attr name="lineType" format="enum">
+            <enum name="bar_chart" value="0"/>
+            <enum name="line_graph" value="1"/>
+        </attr>
+
+        <attr name="lineColor" format="color"/>
+        <attr name="android:gravity"/>
+    </declare-styleable>
+
+    <declare-styleable name="RadioButtonWithVal">
+        <attr name="value" format="string" />
+        <attr name="linerlayoutid"  format="reference" />
+        <attr name="youid"  format="reference" />
+    </declare-styleable>
+    <declare-styleable name="ButtonWithId">
+        <attr name="radiogroupid" format="reference" />
+        <attr name="name" format="string"  />
+    </declare-styleable>
+
+    <declare-styleable name="MyListView">
+        <attr name="vfooter" format="string"/>
+        <attr name="vhead" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="Fragment4_item_view">
+        <attr name="show_bottomline" format="boolean" />
+        <attr name="show_leftimg" format="integer" />
+        <attr name="show_text" format="string" />
+    </declare-styleable>
+</resources>

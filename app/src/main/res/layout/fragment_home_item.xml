@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dp5"
+    android:elevation="@dimen/dp5"
+    android:translationZ="@dimen/dp5"
+    app:cardCornerRadius="@dimen/dp5">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:padding="@dimen/dp5"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/thumbnail"
+            android:layout_width="@dimen/dp120"
+            android:layout_height="@dimen/dp100"
+            android:layout_marginLeft="@dimen/dp5"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginBottom="@dimen/dp10"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+        <!--
+        android:src="" 图片文件
+        android:scaleType="" 缩放方式
+        fitXY 填充拉伸，宽高比可能发生改变
+        center 居中，不缩放，小则裁剪
+        centerCrop 锁定长宽比缩放，裁剪显示
+        centerInside 锁定长宽比缩放，直至完全显示
+        fitCenter 同上，位于中央，类似还有fitEnd底部， fitStart顶部
+        martix 矩阵绘制
+        android:adjustViewBounds="true" 自调整图片layout， 需要layout用wrap
+        android:maxWidth="90dp" 最大宽
+        android:maxHeight="90dp" 最大高
+        android:tint="#aaff0000" 滤镜，蒙版
+        -->
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginLeft="@dimen/dp20"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="@dimen/sp14"
+            app:layout_constraintLeft_toRightOf="@+id/thumbnail"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/app_name" />
+        <TextView
+            android:id="@+id/desc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/dp12"
+            android:layout_marginTop="@dimen/dp10"
+            android:maxLines="3"
+            android:ellipsize="end"
+            tools:text="@string/app_name"
+            app:layout_constraintStart_toStartOf="@id/title"
+            app:layout_constraintTop_toBottomOf="@id/title"
+            />
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text=""
+            android:textSize="@dimen/sp12"
+            android:layout_marginRight="@dimen/dp10"
+            android:layout_marginBottom="@dimen/dp10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

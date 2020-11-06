@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable name="imageModel"
+            type="com.xh.mian.myapp.appitem.home.b.ImageModel" />
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/theme_bg_item"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp40"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@color/themeblue"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="@dimen/sp16"
+                android:textColor="#fff"
+                android:text="@{imageModel.title}" />
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginRight="@dimen/dp10"
+            android:gravity="right"
+            android:orientation="vertical">
+            <Button
+                android:id="@+id/but_1"
+                style="@style/button1"
+                android:onClick="setBut"
+                android:elevation="2dip"
+                android:text="@{imageModel.butTest1}"/>
+            <Button
+                android:id="@+id/but_2"
+                style="@style/button1"
+                android:layout_marginTop="@dimen/dp5"
+                android:onClick="setBut2"
+                android:elevation="2dip"
+                android:text="@{imageModel.butTest2}"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/imge_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:layout_marginRight="@dimen/dp5"
+                android:layout_marginLeft="@dimen/dp5"
+                android:background="@color/white"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_launcher_background" />
+            <TextView
+                style="@style/tv1"
+                android:layout_gravity="center"
+                android:text="图片显示"/>
+            <TextView
+                style="@style/tvTip"
+                android:layout_gravity="left"
+                android:text="@{imageModel.tips}"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_banner_1"
+        android:title="@string/title_ban_1" />
+
+    <item
+        android:id="@+id/navigation_pro"
+        android:icon="@drawable/ic_banner_2"
+        android:title="@string/title_ban_2" />
+
+    <item
+        android:id="@+id/navigation_net"
+        android:icon="@drawable/ic_banner_3"
+        android:title="@string/title_ban_3" />
+    <item
+        android:id="@+id/navigation_person"
+        android:icon="@drawable/ic_banner_4"
+        android:title="@string/title_ban_4" />
+</menu>

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/dp5"
+    >
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp10"
+        android:background="@drawable/dialog_bg" >
+
+        <ImageButton
+            android:id="@+id/negativeButton"
+            android:layout_width="21dp"
+            android:layout_height="21dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="5dp"
+            android:background="#00ffffff"
+            android:src="@android:drawable/ic_menu_close_clear_cancel" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="8dip"
+            android:paddingRight="8dip"
+            android:gravity="center"
+            android:paddingTop="5dip"
+            android:text="日期选择"
+            android:textColor="#000"
+            android:textSize="@dimen/sp14" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/dialog_bg"
+        android:minWidth="300dp"
+        android:layout_marginTop="-3dp"
+        android:layout_marginBottom="-3dp"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+            <NumberPicker
+                android:id="@+id/numberYear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="年"
+                android:textColor="#0000c6"
+                android:textSize="@dimen/sp14"
+                android:textStyle="bold" />
+
+            <NumberPicker
+                android:id="@+id/numberMonth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="月"
+                android:textColor="#0000c6"
+                android:textSize="@dimen/sp14"
+                android:textStyle="bold" />
+
+            <NumberPicker
+                android:id="@+id/numberDay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="日"
+                android:textColor="#0000c6"
+                android:textSize="@dimen/sp14"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+        <View style="@style/style_separate_line"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal" >
+            <NumberPicker
+                android:id="@+id/numberHH"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="时"
+                android:textColor="#0000c6"
+                android:textSize="@dimen/sp14"
+                android:textStyle="bold" />
+            <NumberPicker
+                android:id="@+id/numberMM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="分"
+                android:textColor="#000"
+                android:textSize="@dimen/sp14"
+                android:textStyle="bold" />
+            <NumberPicker
+                android:id="@+id/numberSS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="秒"
+                android:textColor="#0000c6"
+                android:textSize="@dimen/sp14"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_bg"
+        android:padding="@dimen/dp10"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/resetButton"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@+id/positiveButton"
+            android:background="@drawable/but_bg_red"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:text="重置"
+            android:textColor="#6ea102"
+            android:textSize="@dimen/sp14"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/positiveButton"
+            android:layout_width="55dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="5dip"
+            android:background="@drawable/but_bg_red"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:text="确定"
+            android:textColor="#fff"
+            android:textSize="@dimen/sp14" />
+    </RelativeLayout>
+</LinearLayout>

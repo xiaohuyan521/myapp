@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable name="findermodel"
+            type="com.xh.mian.myapp.appitem.home.a.FinderModel" />
+        <variable
+            name="presenter"
+            type="com.xh.mian.myapp.appitem.home.a.Presenter" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/theme_bg_item"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp40"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@color/themeblue"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="@dimen/sp16"
+                android:textColor="#fff"
+                android:text="" />
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginRight="@dimen/dp10"
+            android:gravity="right"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/but_1"
+                style="@style/button1"
+                android:onClick="@{presenter.onClick}"
+                android:elevation="2dip"
+                android:text="@{findermodel.butTest}"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/imge_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:layout_marginRight="@dimen/dp5"
+                android:layout_marginLeft="@dimen/dp5"
+                android:background="@color/white"
+                android:scaleType="centerCrop"
+                android:visibility="gone"
+                android:src="@drawable/ic_launcher_background" />
+            <TextView
+                style="@style/tv1"
+                android:layout_gravity="left"
+                android:text="@{findermodel.tips}"/>
+            <TextView
+                style="@style/tvTip"
+                android:layout_marginTop="@dimen/dp20"
+                android:layout_gravity="left"
+                android:text="@{findermodel.code}"/>
+        </LinearLayout>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dp10"
+            android:orientation="vertical">
+            <RadioGroup
+                android:id="@+id/radioBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@color/gainsboro"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:showDividers="middle"/>
+        </ScrollView>
+    </LinearLayout>
+</layout>

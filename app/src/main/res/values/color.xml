@@ -1,0 +1,10 @@
+<resources>
+    <color name="white">#ffffff</color> <!-- 字体主题色 -->
+
+    <color name="theme_text_color">#535353</color> <!-- 字体主题色 -->
+    <color name="text_color">#0000C6</color> <!-- 字体主题色 -->
+    <color name="textColorPrimary">#212121</color>
+    <color name="theme_bg_item">#F1F1F1</color> <!-- 背景色 -->
+    <color name="themeblue">#00A3FC</color><!-- 主题蓝 -->
+
+</resources>
