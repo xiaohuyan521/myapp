@@ -56,6 +56,8 @@ class NetFragment : Fragment() {
                 Handler().postDelayed(Runnable { mBinding.listfs.stopLoadMore(); }, 1000)
             }
         })
+
+
     }
     private fun getData(){
         val loadingDialog = LoadingDialog(MainActivity.mContex, "正在加载数据...")
@@ -75,23 +77,18 @@ class NetFragment : Fragment() {
 
                     override fun onNext(value: String) {
                         loadingDialog?.stopDialog()
-                        @SuppressLint("HandlerLeak") val handler: Handler = object : Handler() {
-                            override fun handleMessage(msg: Message) {
-                                var data = Tools.dataFilter(value)
-                                var bean = NetBean("", "", "", "", "", "","")
-                                bean.url = url
-                                bean.chapter = data.get("chapter")
-                                bean.author = data.get("author")
-                                bean.title = data.get("title")
-                                bean.desc = data.get("desc")
-                                bean.thumbnail = data.get("thumbnail")
-                                bean.date = data.get("date")
-                                mlist += bean
-                                adapter.updata(mlist)
-                            }
-                        }
-                        Thread { handler.sendEmptyMessage(0) }.start()
 
+                        var data = Tools.dataFilter(value)
+                        var bean = NetBean("", "", "", "", "", "", "")
+                        bean.url = url
+                        bean.chapter = data.get("chapter")
+                        bean.author = data.get("author")
+                        bean.title = data.get("title")
+                        bean.desc = data.get("desc")
+                        bean.thumbnail = data.get("thumbnail")
+                        bean.date = data.get("date")
+                        mlist += bean
+                        adapter.updata(mlist)
                         //Toast.makeText(MainActivity.mContex, data.toString(), Toast.LENGTH_SHORT).show()
                         if (mDisposable != null && !mDisposable!!.isDisposed) mDisposable!!.dispose() //注销
                     }

@@ -150,7 +150,7 @@ public class EmailUtil {
 
             Transport transport = session.getTransport();
             // 连接邮件服务器
-            transport.connect("smtp.qq.com","2112430294@qq.com", "luqolfozxmkreege");
+            transport.connect("smtp.qq.com","2112430294@qq.com", "hunkningioxzbjea");
             // 发送邮件
             //transport.sendMessage(msg, new Address[]{new InternetAddress("xh1818111@163.com")});
             transport.sendMessage(msg, msg.getAllRecipients());

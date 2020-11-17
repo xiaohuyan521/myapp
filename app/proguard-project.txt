@@ -107,3 +107,7 @@
 -optimizationpasses 5
 -dontusemixedcaseclassnames
 -verbose
+
+#timeruler
+-keep class com.hdl.timeruler.**{*;}
+-dontwarn com.hdl.timeruler.**

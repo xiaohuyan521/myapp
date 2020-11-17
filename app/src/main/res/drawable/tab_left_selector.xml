@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@color/white" android:state_selected="false" />
+    <item android:state_selected="true">
+        <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+            <!-- 主体背景颜色值 -->
+            <item
+                android:bottom="@dimen/dp10"
+                android:left="@dimen/dp20"
+                android:right="@dimen/dp20"
+                android:top="@dimen/dp10">
+                <shape>
+                    <solid android:color="@color/themeblue" />
+                    <corners android:radius="12dp" />
+                </shape>
+            </item>
+
+        </layer-list>
+    </item>
+
+
+
+</selector>

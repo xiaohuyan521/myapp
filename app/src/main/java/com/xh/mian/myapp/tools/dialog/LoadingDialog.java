@@ -2,8 +2,11 @@ package com.xh.mian.myapp.tools.dialog;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.graphics.PixelFormat;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.animation.LinearInterpolator;
@@ -27,7 +30,6 @@ public class LoadingDialog {
     public LoadingDialog(Context context, String msg) {
 
         View view = LayoutInflater.from(context).inflate(R.layout.global_dialog_view, null);
-
         TextView tv = (TextView) view.findViewById(R.id.global_dialog_tv);
         if (null == msg || ("").equals(msg)) {
             msg = "加载中 . . .";
@@ -38,8 +40,15 @@ public class LoadingDialog {
 
         //按返回键是否有效
         mLoadingDialog.setCancelable(true);
-
-        mLoadingDialog.setContentView(view, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT));
+        WindowManager.LayoutParams params = new WindowManager.LayoutParams();
+        // 系统级别的窗口
+        params.type = WindowManager.LayoutParams.TYPE_SYSTEM_ALERT
+                | WindowManager.LayoutParams.TYPE_SYSTEM_OVERLAY;
+        // 居中显示
+        params.gravity = Gravity.CENTER;
+        // 设置背景透明
+        params.format = PixelFormat.TRANSPARENT;
+        mLoadingDialog.setContentView(view, params);
     }
 
     /**

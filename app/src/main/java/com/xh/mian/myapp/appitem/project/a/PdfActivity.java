@@ -225,7 +225,7 @@ public class PdfActivity extends AppCompatActivity {
             if (requestCode == REQUESTCODE_EXPORT) {
                 List<String> list = data.getStringArrayListExtra(Constant.RESULT_INFO);
                 String name = new SimpleDateFormat("yyyy-MM-dd_HH:mm:ss").format(new Date());
-                EmailUtil email = new EmailUtil(this,list.get(0),"871096605@qq.com",
+                EmailUtil email = new EmailUtil(this,list.get(0),"xh1818111@163.com",
                         "pdf_"+name,
                         this.getPackageName());
                 email.sendmial("pdf正在发送中");

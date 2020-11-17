@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp40"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@color/themeblue"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="@dimen/sp16"
+                android:textColor="#fff"
+                android:text="计算器" />
+        </RelativeLayout>
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/mtrans_main_tablayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp50"
+            android:background="@color/white"
+            app:tabRippleColor="@color/transparent"
+            app:tabIndicatorFullWidth="false"
+            app:tabTextColor="@color/black"
+            app:tabSelectedTextColor="@color/white"
+            app:tabIndicatorColor="@color/transparent"
+            app:tabMaxWidth="0dp"
+            app:tabBackground="@drawable/tab_left_selector"
+            app:tabTextAppearance="@style/TabLayoutTextStyle">
+        </com.google.android.material.tabs.TabLayout>
+
+        <androidx.viewpager.widget.ViewPager
+
+            android:id="@+id/mtrans_main_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_marginRight="@dimen/dp10">
+
+        </androidx.viewpager.widget.ViewPager>
+    </LinearLayout>
+</layout>

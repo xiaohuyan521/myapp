@@ -39,4 +39,15 @@
         <attr name="show_leftimg" format="integer" />
         <attr name="show_text" format="string" />
     </declare-styleable>
+
+    <declare-styleable name="voiceView">
+        <attr name="voiceLine" format="integer" />
+        <attr name="maxVolume" format="float" />
+        <attr name="sensibility" format="integer" />
+        <attr name="middleLine" format="integer" />
+        <attr name="middleLineHeight" format="integer" />
+        <attr name="lineSpeed" format="integer" />
+        <attr name="fineness" format="integer" />
+    </declare-styleable>
+
 </resources>

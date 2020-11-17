@@ -1,38 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <LinearLayout
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f6f6f6"
+    android:orientation="vertical">
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/theme_bg_item"
-        android:orientation="vertical">
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/dp40"
+        android:layout_height="@dimen/dp40"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@color/themeblue"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
-            android:background="@color/themeblue"
-            android:orientation="horizontal">
-            <TextView
-                android:id="@+id/title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:ellipsize="end"
-                android:maxLines="1"
-                android:layout_marginLeft="@dimen/dp10"
-                android:layout_marginRight="@dimen/dp10"
-                android:textSize="@dimen/sp16"
-                android:textColor="#fff"
-                android:text="" />
-        </RelativeLayout>
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_marginRight="@dimen/dp10"
+            android:textSize="@dimen/sp16"
+            android:textColor="#fff"
+            android:text="" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal">
         <WebView
             android:id="@+id/webview"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="@dimen/dp5"
             android:layout_marginBottom="@dimen/dp5"
-            android:background="#ffffff"/>
-    </LinearLayout>
+            android:visibility="gone"
+            android:background="#f4f4f4"/>
+        <RelativeLayout
+            android:id="@+id/lv_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:onClick="setupdata"
+            android:clickable="true"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/dp100">
+
+            <ImageView
+                android:layout_centerHorizontal="true"
+                android:id="@+id/loading_error_img"
+                android:layout_width="@dimen/dp120"
+                android:layout_height="@dimen/dp120"
+                android:src="@drawable/error"/>
+
+            <TextView
+                android:text="加载失败，请检查网络"
+                android:textSize="@dimen/sp20"
+                android:id="@+id/loading_error_tv"
+                android:layout_below="@id/loading_error_img"
+                android:layout_marginTop="@dimen/dp20"
+                android:textColor="#272636"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:text="点击屏幕重试"
+                android:textSize="@dimen/sp20"
+                android:layout_below="@id/loading_error_tv"
+                android:layout_marginTop="@dimen/dp5"
+                android:textColor="#272636"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/lv_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp150"
+            android:background="#e6e6e6"
+            android:layout_centerInParent="true"
+            android:padding="@dimen/dp20"
+            android:orientation="vertical">
+
+            <com.wang.avi.AVLoadingIndicatorView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_gravity="center"
+                android:visibility="visible"
+                app:indicator="BallTrianglePath"
+                app:indicator_color="@color/dimgrey"/>
+
+            <TextView
+                android:id="@+id/global_dialog_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:gravity="center"
+                android:text="页面加载中 . . ."
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp18" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
 </layout>

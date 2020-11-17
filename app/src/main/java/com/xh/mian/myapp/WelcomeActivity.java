@@ -1,14 +1,10 @@
 package com.xh.mian.myapp;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -18,12 +14,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
-import com.bumptech.glide.Glide;
 import com.xh.mian.myapp.appui.login.LoginActivity;
-import com.xh.mian.myapp.appui.main.MainActivity;
-import com.xh.mian.myapp.appui.main.home.HomeBean;
 import com.xh.mian.myapp.tools.db.SharedPreferences;
-import com.xh.mian.myapp.tools.https.OKhttp;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -46,6 +38,7 @@ public class WelcomeActivity extends AppCompatActivity {
             onNextClick(null);
             return;
         }
+
         initView();
         setOnClick(); //添加点击事件
     }

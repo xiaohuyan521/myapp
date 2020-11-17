@@ -93,5 +93,9 @@
         </LinearLayout>
 
     </LinearLayout>
+    <com.xh.mian.myapp.tools.view.VoiceLineSurfaceView
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
 </RelativeLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:padding="@dimen/dp10"
+    android:layout_height="match_parent">
+    <com.xh.mian.myapp.tools.view.SurfaceViewTemplate
+        android:id="@+id/tr_line"
+
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp100" />
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp20"
+        android:id="@+id/listView"/>
+</LinearLayout>
